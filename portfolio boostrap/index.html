@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">GAMERS </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Link</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- CAROUSEL -->
+
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://img.freepik.com/free-photo/high-angle-gamer-playing-indoors_23-2149829144.jpg?t=st=1696045521~exp=1696046121~hmac=ab8eee3d63ccf1a76385dc8ad428ff67d9236d59267fd949ba967e2c77ea2454" class="d-block w-100" alt="img1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.freepik.com/free-photo/man-neon-suit-sits-chair-with-neon-sign-that-says-word-it_188544-27011.jpg?w=996&t=st=1696066919~exp=1696067519~hmac=3635aa7ed36334ad8c5bc4ebb9dfd271a57f463016a738f5258a2540d119abf8" class="d-block w-100" alt="img2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://img.freepik.com/premium-photo/game-art-firstperson-shooters-fps-background-wallpaper-generative-ai_28914-15843.jpg?w=996" class="d-block w-100" alt="img3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Order classes  -->
+
+<!-- <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      First in DOM, no order applied
+    </div>
+    <div class="col order-5">
+      Second in DOM, with a larger order
+    </div>
+    <div class="col order-1">
+      Third in DOM, with an order of 1
+    </div>
+  </div>
+</div> -->
+
+<!-- Horizontal rules -->
+<hr>
+
+<div class="text-success">
+  <hr>
+</div>
+
+<!-- <hr class="border border-danger border-2 opacity-50"> -->
+<!-- <hr class="border border-primary border-3 opacity-75"> -->
+
+<!-- Standalone column classes  -->
+<div class="clearfix">
+  <img src="https://img.freepik.com/free-vector/virtual-influencer-abstract-concept-illustration-influencer-marketing-digital-agency-service-virtual-character-computer-generated-person-social-media-brand-avatar_335657-1080.jpg?w=740&t=st=1696068318~exp=1696068918~hmac=3dc1581abd118a876c3b0409bf153aab06dd45a8867f6f5c7588417c54799216" class="col-md-6 float-md-end mb-3 ms-md-3" alt="img4">
+
+  <p>
+    A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+  </p>
+
+  <p>
+    As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+  </p>
+
+  <p>
+    And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+  </p>
+
+   <p>
+    And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+  </p>
+
+   <p>
+    And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+  </p>
+
+   <p>
+    And yet, here you are, still persevering in reading this placeholder text, hoping for some more insights, or some hidden easter egg of content. A joke, perhaps. Unfortunately, there's none of that here.
+  </p>
+</div>
+
+<!-- Horizontal rules -->
+<hr>
+
+<div class="text-success">
+  <hr>
+</div>
+
+<!-- Aligning images -->
+<img src="https://img.freepik.com/free-vector/play-earn-concept-illustration_614304-22.jpg?w=400&t=st=1696070009~exp=1696070609~hmac=60670b6ffacc4a6c0dcdb081e1056c198bb984fc7f799545c19f9cb92fcb77c4" class="rounded float-start" alt="vector1">
+<!-- <img src="https://img.freepik.com/free-vector/business-financial-report-entrepreneurs-cartoon-characters-writing-business-plan-analyzing-data-statistics-graphic-information-research-vector-isolated-concept-metaphor-illustration_335657-2749.jpg?w=200&t=st=1696070580~exp=1696071180~hmac=2696c45371a218a0de06d3b3ba4016f6ddf06f1d9ca9e8735ed48b5261678e83" class="rounded mx-auto d-block" alt="vector3"> -->
+<img src="https://img.freepik.com/free-vector/sleep-deprivation-abstract-concept-vector-illustration-insomnia-symptom-sleep-loss-deprivation-problem-mental-health-cause-treatment-clinical-diagnostic-sleeplessness-abstract-metaphor_335657-4172.jpg?w=400&t=st=1696070114~exp=1696070714~hmac=d0f456d998ae31fc9cad43cdde3927adc467d9295bddde5e557a3b93e901e2a7" class="rounded float-end" alt="vector2">
+
+<!-- Responsive images -->
+<img src="https://img.freepik.com/free-vector/gamer-text-effect_314614-408.jpg?w=1060&t=st=1696070847~exp=1696071447~hmac=5193ac4b7f0b534c24cda2f45ec50e15349270eeca98b08c5fa0c7e13af40225" class="img-fluid" alt="Responsive images">
+
+<!-- Form controls -->
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+<!-- card text-center -->
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+  <!-- Then put toasts within -->
+  <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="..." class="rounded me-2" alt="...">
+      <strong class="me-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div>
+</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
