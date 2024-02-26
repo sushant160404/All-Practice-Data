@@ -1,0 +1,258 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: 'Jost', sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+#home{
+	/*height: 100vh;
+	width: 100%;
+	background-color: violet;*/
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100vh;
+	background:rgba(255,255,255,0);
+	background: -webkit-linear-gradient(-180deg , rgba(249.69,249.69,249.69,1) 0%, rgba(252,252,252,1) 100%);
+	background: -o-linear-gradient(-180deg , rgba(249.69,249.69,249.69,1) 0%, rgba(252,252,252,1) 100%);
+	background: -moz-linear-gradient(-180deg , rgba(249.69,249.69,249.69,1) 0%, rgba(252,252,252,1) 100%);
+	background: -ms-linear-gradient(-180deg , rgba(249.69,249.69,249.69,1) 0%, rgba(252,252,252,1) 100%);
+	background: linear-gradient(-180deg , rgba(249.69,249.69,249.69,1) 0%, rgba(252,252,252,1) 100%);
+}
+
+#navbar{
+	width: 100%;
+	height: 10vh;
+	background-color: yellow;
+}
+
+#logo{
+	color: green;
+	padding-top: 35px;
+	font-weight: bold;
+	/*top: 65.08px;
+	left: 162.36px;
+	width: 18.45px;
+	height: 23.96px;*/
+}
+
+#navbar2{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-top: -20px;
+	font-size: 10px;
+
+
+}
+
+#searchbar{
+	justify-content: right;
+	display: flex;
+	margin-top: -10px;
+	margin-right: 40px;
+}
+
+#contact_btn{
+	justify-content: right;
+	display: flex;
+	margin-top: -20px;
+}
+
+#logo span{
+	 font-weight: bold;
+	 background-color: green;
+	 color: white;
+	 padding: 2px 2px 2px 2px;
+	 border-radius: 5px;
+}
+
+#home1 #n1{
+	padding-top: 120px;
+	font-size: 50px;
+	font-weight: bold;
+
+}
+
+#home1 p{
+	padding-top: 50px;
+	font-size: 21px;
+}
+
+#orderbtn{
+	height: 40px;
+	width: 160px;
+	background-color: rgb(0, 255, 0);
+	color: white;
+	font-size: 20px;
+	border-radius: 20px;
+	border-style: none;
+	box-shadow: 1px 2px 11px 3px rgb(135, 255, 135);
+}
+
+#orderb{
+	padding-top: 30px;
+}
+
+#video{
+	font-size: 20px;
+	padding-left: 200px;
+	margin-top: -31px;
+}
+
+#playb{
+	width: 35px;
+	height: 35px;
+	padding-left: 9px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+	background-color: white;
+	border-radius: 100px;
+	box-shadow: 1px 2px 11px 3px rgba(0,0,0,0.4);
+	
+}
+
+#f1{
+	color: rgb(0, 255, 0);
+
+}
+
+#dplay{
+	padding-left: 330px;
+	margin-top: -27px;
+}
+
+#imgcircle{
+	width: 300px;
+	height: 300px;
+	background-color: rgb(0, 255, 0);
+	margin-left: 650px;
+	margin-top: -300px;
+	border-radius: 200px;
+}
+
+#girlimg{
+	position: absolute;
+	margin-left: -280px;
+	margin-top: -80px;
+}
+
+#img1{
+
+}
+
+#tproduct1{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	margin-top: -30px;
+	background-color: white;
+	margin-left: 600px;
+	border-radius: 20px;
+	box-shadow: 1px 2px 11px 3px rgba(0,0,0,0.4);
+}
+
+#tproduct2{
+	position: absolute;
+	width: 180px;
+	height: 80px;
+	margin-top: -30px;
+	background-color: white;
+	margin-left: 800px;
+	border-radius: 20px;
+	box-shadow: 1px 2px 11px 3px rgba(0,0,0,0.4);
+}
+
+#man1{
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+#salad1{
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+#tproduct1 h5{
+	position: absolute;
+	margin-top: -65px;
+	margin-left: 80px;
+}
+
+#tproduct1 h4{
+	margin-left: 80px;
+}
+
+#tproduct1 span{
+	color: red;
+}
+
+#tproduct2 h5{
+	position: absolute;
+	margin-top: -65px;
+	margin-left: 80px;
+}
+
+#tproduct2 h4{
+	margin-left: 80px;
+}
+
+#tproduct2 span{
+	color: red;
+}
+
+#s1{
+	width: 10px;
+	height: 10px;
+}
+
+#s2{
+	width: 10px;
+	height: 10px;
+}
+
+#ss1{
+	margin-top: -50px;
+	margin-left: 80px;
+}
+
+#ss2{
+	margin-top: -50px;
+	margin-left: 80px;
+}
+
+#comment{
+	position: absolute;
+	width: 150px;
+	height: 35px;
+	background-color: white;
+	margin-left: 550px;
+	margin-top: 120px;
+	border-radius: 20px 20px 0 20px;
+	box-shadow: 1px 2px 11px 3px rgba(0,0,0,0.4);
+}
+
+#comment div{
+	width: 20px;
+	height: 40px;
+	background-color: white;
+	margin-left: 130px;
+	border-radius: 1px 200px 28px 200px;
+	margin-top: 8px;
+}
