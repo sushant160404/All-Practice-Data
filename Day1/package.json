@@ -1,0 +1,11 @@
+{
+  "name": "demoapp1",
+  "version": "1.0.0",
+  "description": "a basic code with chai aur code",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "author": "Sushant Namurte",
+  "license": "ISC"
+}
