@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "General Sans";
+	bax-sizing: border-box;
+}
+
+html,body{
+	width: 100%;
+	height: 100vh;
+/*	overflow: hidden;*/
+}
+
+
+.main{
+	width: 100%;
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Jost', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+}
+
+.navbar{
+	position: relative;
+	display: flex;
+	background-image: url("image/background-1.jpg");
+}
+
+.logo{
+	margin-left: 80px;
+	margin-top: 18px;
+}
+
+.navbar #navtext{
+	display: flex;
+	margin-top: 32px;
+	padding-left: 610px;
+	overflow: hidden;
+	background-color: ;
+} 
+
+#nt2{
+	padding-left: 40px;
+}
+
+#nt3{
+	padding-left: 40px;
+}
+
+#nt4{
+	padding-left: 40px;
+}
+
+#navtext{
+	overflow: hidden;
+}
+
+
+/*.navbar{
+	width: 100%;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	 display: block;
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none*/
+
+
+
+
+
+/*	background-image: url(Image/background-1.jpg);*/
+
+
+
+
+}
