@@ -1,7 +1,7 @@
 # All-Practice-Data
 🚀 Embrace the Coding Journey with Consistency and Passion! 🚀
 
-Hey LinkedIn fam,
+Hey GitHub Friends,
 
 Just a reminder as you dive into another day of coding: greatness comes from consistent effort and unwavering passion. Every line of code is a step toward mastery, and every bug you fix is a victory in the making.
 
