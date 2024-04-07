@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="w-screen h-screen bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
+      <div class="w-65 border-none drop-shadow-2xl rounded-xl bg-white p-10">
+        <form class="space-x-4" action="https://getform.io/f/lbjkodwa" method="POST" enctype="multipart/form-data">
+            <input class="p-5 bg-slate-900 dark:text-white rounded-xl" type="file" name="file" required>
+            <input class="p-5 bg-slate-900 text-white rounded-xl" type="text" name="full-name" placeholder="Your name" required>
+            <!-- add hidden Honeypot input to prevent spams -->
+            <input type="hidden" name="_gotcha" style="display:none !important" required>
+            <button class="bg-slate-900 dark:text-white rounded-xl p-5" type="submit">Send</button>
+         </form>
+      </div>
+    </div>
+  </body>
+</html>
