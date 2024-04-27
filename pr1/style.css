@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: black;
+	color: white;
+}
+
+#nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 50px;
+	height: 8vh;
+/*	background-color: white;*/
+}
+
+#lik{
+	display: flex;
+	gap: 50px;
+}
+
+#hed1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	white-space: nowrap;
+}
+
+#hed{
+	height: 92vh;
+/*	background-color: red;*/
+
+}
+
+h1{
+	background-image: url(https://4kwallpapers.com/images/wallpapers/gradient-background-3440x1440-10974.jpg);
+	background-size: cover;
+	background-position: center;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+img{
+	width: 150px;
+	height: 150px;
+	background-color: red;
+}
