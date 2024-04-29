@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: gilory;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	background-color: lightblue;
+	background-image: url(https://img.freepik.com/free-photo/sun-sunlight-bright-outdoor-sky_1127-2391.jpg?t=st=1714388518~exp=1714392118~hmac=61c77c4e48addfdf994fd1b9d25ead616798438a7a985f6653933fb7110ce41f&w=900);
+	background-size: cover;
+	background-position: center;
+}
+
+body{
+	overflow: hidden;
+	overflow-x: hidden;
+}
+
+#nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 50px;
+	color: white;
+}
+#nav  h2{
+	font-size: 30px;
+}
+#nav i{
+	font-size: 30px;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+#full{
+	height: 100%;
+	width: 40%;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.544);
+	top: 0;
+	right: -40%;
+	backdrop-filter: blur(10px);
+	padding: 150px 50px;
+
+}
+
+#full h4{
+	font-size: 50px;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+#full i{
+	position: absolute;
+	top: 5%;
+	right: 10%;
+	background-color: white;
+	border-radius: 50%;
+	padding: 5px;
+	font-weight: 600;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+
