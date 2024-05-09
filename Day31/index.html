@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --body-color: 17 24 39;
+            
+            --font-color: 255 255 255;
+            --accent-font-color: 170 170 170;  
+            --highlight-color: 192 124 63;
+            
+            --theme-background: 10 10 10;
+            
+            --theme-light: 0 0 0;
+            --theme-medium: 0 0 0;
+            --theme-dark: 0 0 0;
+            
+            --gradient-color-1: 150 214 225;  
+            --gradient-color-2: 179 229 207;
+            --linear-gradient: linear-gradient(to right, rgb(var(--gradient-color-1)), rgb(var(--gradient-color-2)));
+          }
+          
+          body {
+            background-color: rgb(var(--body-color));
+            margin: 0px;
+          }
+          
+          body::-webkit-scrollbar {
+            width: 4px;
+          }
+          
+          body::-webkit-scrollbar-track {
+            background-color: rgb(var(--theme-background));
+          }
+          
+          body::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+          }
+          
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+          
+          button {
+            all: unset;
+            cursor: pointer;
+          }
+          
+          h1, h2, h3, h4, input, select, button, span, a, p {
+            color: rgb(var(--font-color));
+            font-family: "Noto Sans", sans-serif;
+            font-size: 1rem;
+          }
+          
+          button, a, input {  
+            outline: none;
+          }
+          
+          .highlight {
+            color: rgb(var(--highlight-color));
+          }
+          
+          .gradient {  
+            background: var(--linear-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          
+          .fancy-scrollbar::-webkit-scrollbar {
+            height: 4px;
+            width: 4px;
+          }
+          
+          .fancy-scrollbar::-webkit-scrollbar-track {
+            background-color: transparent;
+          }
+          
+          .fancy-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+          }
+          
+          .no-scrollbar::-webkit-scrollbar {
+            height: 0px;
+            width: 0px;
+          }
+          
+          #phone {
+            background-color: rgb(var(--theme-background));
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+            height: 851px;
+            width: 393px;  
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+          }
+          
+          #main-wrapper {
+            height: 100%;
+            overflow: auto;
+          }
+          
+          #main {
+            height: 100%;
+          }
+          
+          #nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            z-index: 3;
+            background-color: rgb(var(--theme-background));
+            padding: 0.5rem 1rem;
+            border-top: 1px solid rgb(255 255 255 / 10%);
+          }
+          
+          #nav > button {
+            padding: 0.5rem 1rem;  
+            border-radius: 0.25rem;
+            position: relative;
+          }
+          
+          #nav > button.active:after {
+            content: "";
+            height: 0.25rem;
+            width: 1.5rem;
+            position: absolute;
+            top: -0.5rem;
+            left: 50%;
+            translate: -50%;
+            background: var(--linear-gradient);
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+          }
+          
+          #nav > button:hover,
+          #nav > button:focus-visible {
+            background-color: rgb(255 255 255 / 10%);
+          }
+          
+          #nav > button > i {
+            width: 1.5rem;
+            font-size: 1.1rem;
+            text-align: center;
+          }
+          
+          #header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+          }
+          
+          #header-background-image {
+            width: 100%;
+            display: flex;
+            z-index: 1;
+            left: 0px;
+            top: 0px;
+            position: relative;
+          }
+          
+          #header-background-image > img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+          
+          #header-items {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            z-index: 3;
+            padding: 0.5rem 1rem;
+            overflow: auto;
+            background: linear-gradient(to bottom, rgb(34, 123, 66) 0%, rgb(10 10 10) 40%, transparent 40%);
+          }
+          
+          .header-item-image {
+            position: relative;  
+          }
+          
+          .header-item-image:after {
+            content: "";
+            height: calc(100% - 0.5rem);
+            width: calc(100% - 0.5rem);
+            position: absolute;
+            left: 0px;
+            top: 0px;  
+            z-index: -1;
+            background-color: white;
+            margin: -0.25rem;
+            border-radius: 0.5rem;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          }
+          
+          .header-item-image > img {
+            width: 200px;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0.4rem;
+          }
+          
+          .header-item-content > .label {
+            display: flex;  
+          }
+          
+          .header-item-content > .label > p {
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 0.25rem;
+          }
+          
+          #body {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
+          
+          #body-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            z-index: 2;
+            margin-top: 1rem;
+            padding-bottom: 4rem;
+          }
+          
+          #background-gradient {
+            height: 300px;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            background: linear-gradient(
+              -15deg, 
+              transparent 30%, 
+              rgb(var(--gradient-color-1)), 
+              rgb(var(--gradient-color-2))
+            );
+            opacity: 0.15;
+            filter: blur(3rem);
+          }
+          
+          #search-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin: 0rem 1rem;
+          }
+          
+          #search {
+            height: 3.5rem;
+            position: relative;
+            background: linear-gradient(to right, rgb(var(--gradient-color-1)), rgb(var(--gradient-color-2)));
+            border-radius: 0.4rem;
+          }
+          
+          #search-input {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: absolute;
+            inset: 2px;
+            background-color: rgb(var(--theme-background) / 90%);
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            backdrop-filter: blur(0.75rem);
+          }
+          
+          #search-input > i {
+            width: 1.5rem;
+            padding: 0rem 0.25rem;
+            color: rgb(255 255 255 / 85%); 
+            text-align: center;
+          } 
+          
+          #search-input > input {
+            width: 100%;
+            flex-grow: 1; 
+            color: white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-weight: 500;
+          }
+          
+          #search-input > button {
+            height: 2rem;
+            width: 2rem;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            cursor: pointer;
+          }
+          
+          #search-input > button > i {
+            color: rgb(255 255 255 / 85%); 
+          }
+          
+          #search-input > button:is(:hover, :focus-visible) {
+            background: rgb(255 255 255 / 10%);
+            border-radius: 0.25rem;
+          }
+          
+          #search-input > input::placeholder {
+            color: rgb(255 255 255 / 25%);
+          }
+          
+          #search-categories {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 0.25rem;
+            overflow: auto;
+          }
+          
+          #search-categories > button {
+            flex-shrink: 0;
+            background-color: rgb(255 255 255 / 5%);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.25rem;
+            color: white; 
+            font-size: 0.75rem;
+            font-weight: 500;
+          }
+          
+          #location > button {
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-left: 2.25rem;
+            position: relative;
+          }
+          
+          #location > button:after {
+            content: "";
+            height: 0.75rem;
+            width: 0.5rem;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            margin-left: -1.25rem;
+            margin-top: 0.25rem;
+            border-left: 2px solid rgb(255 255 255 / 40%);
+            border-bottom: 2px solid rgb(255 255 255 / 40%);
+            border-bottom-left-radius: 0.3rem;
+          }
+          
+          #location > button > :is(i, p) {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: white;
+            font-size: 0.75rem;  
+          }
+          
+          #location > button > i {
+            height: 100%;
+          }
+          
+          #location > button > p {
+            color: rgb(var(--font-color) / 75%);
+            font-weight: 500;
+          }
+          
+          #ad {
+            display: flex;
+            border: 1px solid rgb(255 255 255 / 10%);
+            padding: 0.25rem;
+            margin: 0rem 1rem;
+            border-radius: 0.25rem;
+          }
+          
+          #ad > img {
+            width: 100%;
+            border-radius: inherit;
+          }
+          
+          #also-like {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 0rem 1rem;
+          }
+          
+          #also-like > h3 {
+            font-size: 0.9rem; 
+          }
+          
+          #also-like-items {
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, 1fr);
+          }
+          
+          #also-like-items > button { 
+            display: flex;
+            aspect-ratio: 1;
+          }
+          
+          #also-like-items > button > img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 0.25rem;
+          }
+          
+          @media(max-width: 500px) {
+            body {
+              overflow: auto;  
+            }
+            
+            #phone {
+              height: 100vh;
+              display: flex;
+              width: 100%;
+              margin: 0px auto;
+            }
+            
+            #main-wrapper {
+              width: 100%;
+              flex-grow: 1;
+            }
+          }
+    </style>
+</head>
+<body>
+    <div id="phone">
+        <div id="main-wrapper" class="fancy-scrollbar">
+          <div id="main">
+            <div id="nav">
+              <button type="button" class="active">
+                <i class="fa-solid fa-house gradient"></i>
+              </button>
+              <button type="button">
+                <i class="fa-solid fa-user"></i>
+              </button>
+              <button type="button">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+              <button type="button">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+            <div id="content">
+              <div id="header">
+                <div id="header-background-image">
+                  <img src="https://assets.codepen.io/1468070/Earth+Day.png" alt="" />
+                </div>
+                <div id="header-items" class="no-scrollbar">
+                  <button class="header-item" type="button">
+                    <div class="header-item-image">
+                      <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2FyZGVuaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                    </div>
+                    <div class="header-item-content">
+                      <div class="label">
+                        <p>Gardening Supplies & Yard Care</p>
+                      </div>
+                    </div>
+                  </button>
+                  <button class="header-item" type="button">
+                    <div class="header-item-image">
+                      <img src="https://images.unsplash.com/photo-1512243448106-c5a78f7955c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" />
+                    </div>
+                    <div class="header-item-content">
+                      <div class="label">
+                        <p>Scraggly Plant Decoration</p>
+                      </div>
+                    </div>
+                  </button>
+                  <button class="header-item" type="button">
+                    <div class="header-item-image">
+                      <img src="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2159&q=80" />
+                    </div>
+                    <div class="header-item-content">
+                      <div class="label">
+                        <p>300ft Trees</p>
+                      </div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div id="body">
+                <div id="background-gradient"></div>
+                <div id="body-content">
+                  <div id="search-wrapper">
+                    <div id="search-categories" class="no-scrollbar">
+                      <button type="button">Pharmacy</button>
+                      <button type="button">Video</button>
+                      <button type="button">In-Store Code</button>
+                      <button type="button">Prime</button>
+                      <button type="button">Whole Foods</button>
+                      <button type="button">Alexa</button>
+                    </div>
+                    <div id="search">
+                      <div id="search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search Amazon" />
+                        <button type="button">
+                          <i class="fa-brands fa-instagram"></i>
+                        </button>
+                        <button type="button">
+                          <i class="fa-regular fa-microphone"></i>
+                        </button>
+                      </div>
+                    </div>            
+                    <div id="location">
+                      <button type="button">
+                        <i class="fa-regular fa-location-dot"></i>
+                        <span>·</span>
+                        <p>Select a location to see product availability</p>
+                      </button>
+                    </div>
+                  </div>
+                  <div id="ad">
+                    <img src="https://assets.codepen.io/1468070/Freevee+Ad.png" alt="" />
+                  </div>
+                  <div id="also-like">
+                    <h3>You might also like</h3>
+                    <div id="also-like-items">
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1585386931415-464367473a01?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjV8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1525904097878-94fb15835963?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1610824352934-c10d87b700cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1634283715079-d91bbed0ece0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHByb2R1Y3RzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                      <button type="button">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
