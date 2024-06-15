@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    /* Existing styles... */
+    .product {
+        /* Existing styles... */
+        transition: transform 0.3s;
+    }
+
+    .product:hover {
+        transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    #cart {
+        animation: fadeIn 0.5s;
+    }
+    header {
+        background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
+        background-size: 400% 400%;
+        animation: gradientAnimation 10s ease infinite;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+    }
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+</style>
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple E-Commerce Website</h1>
+    </header>
+
+    <section id="products">
+        <div class="product">
+            <img src="image1.jpg">
+            <h2>Product 1</h2>
+            <p>Description of Product 1.</p>
+            <p>$19.99</p>
+            <button onclick="addToCart('Product 1', 19.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image1.jpg">
+            <h2>Product 2</h2>
+            <p>Description of Product 2.</p>
+            <p>$29.99</p>
+            <button onclick="addToCart('Product 2', 29.99)">Add to Cart</button>
+        </div>
+
+        <!-- Add more products as needed -->
+    </section>
+
+    <section id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </section>
+
+    <script>
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({ productName, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+
+            cartItemsElement.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.productName} - $${item.price.toFixed(2)}`;
+                cartItemsElement.appendChild(listItem);
+                total += item.price;
+            });
+
+            cartTotalElement.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+s
